@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Variáveis de ambiente e configuração local com credenciais
+.env
+.env.*
+!.env.example
+db/config.py
+
+# Testes e ferramentas de análise
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Pacotes gerados
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Editores e sistema operacional
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini

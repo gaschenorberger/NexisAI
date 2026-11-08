@@ -3,7 +3,7 @@ uvicorn backend.mainFastApi:app --reload --port 8001
 """
 
 from fastapi import FastAPI
-from backend.controller.RegisterController import registerRouter
+from backend.controller.auth.RegisterController import registerRouter
 
 app = FastAPI()
 

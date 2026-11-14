@@ -1,0 +1,145 @@
+.loginPage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    width: 100%;
+    background-color: #000;
+}
+
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    width: 100%;
+    max-width: 380px;
+}
+
+.topSection {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    justify-content: center;
+    align-items: center ;
+
+    margin-top: 0;
+}
+
+.nexisIcon {
+    width: 100px;
+    padding: 0;
+}
+
+.CTALogin {
+    margin-top: -10px;
+    background: linear-gradient(
+        90deg,
+        #A383FF 0%,
+        #61FFDF 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight: 400;
+}
+
+.loginPageText {
+    margin-top: -5px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    background: linear-gradient(
+        120deg,
+        #FFFFFF 0%,
+        #999999 100%
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    color: white;
+}
+
+.divider:before,
+.divider:after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #FFFFFF;
+}
+
+
+
+.emailNextButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+    border: 2px solid transparent;
+    border-radius: 20px;
+
+    color: white;
+
+    background:
+        linear-gradient(#1f1f1f, #1f1f1f) padding-box,
+        linear-gradient(90deg, #9274FF, #52D6E8) border-box;
+
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.emailNextButton:not(:disabled):hover {
+    background: linear-gradient(
+        90deg,
+        #9274FF,
+        #52D6E8
+    );
+
+    color: black;
+}
+
+.emailNextButton:disabled {
+    background:
+        linear-gradient(#1f1f1f, #1f1f1f) padding-box,
+        linear-gradient(white, white) border-box;
+
+    color: white;
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.emailNextButton svg {
+    background: transparent;
+}
+
+.emailForm {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.fullWidth {
+    width: 100%;
+}
+

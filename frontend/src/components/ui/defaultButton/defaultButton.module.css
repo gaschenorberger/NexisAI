@@ -1,0 +1,44 @@
+.defaultButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 10px 30px;
+    color: white;
+    border: solid 2px transparent;
+    border-radius: 15px;
+
+    background:
+        linear-gradient(#171717, #171717) padding-box,
+        linear-gradient(90deg, #52D6E8, #9274FF) border-box;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.defaultButton:hover{
+    background:
+        linear-gradient(90deg, #52D6E8, #9274FF);
+    color: #000;
+}
+
+.textButton{
+    background: transparent;
+    margin: 0;
+}
+
+.buttonIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.buttonIcon svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    fill: currentColor;
+}

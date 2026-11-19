@@ -1,0 +1,60 @@
+.inputContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 56px;
+    padding: 5px 7px 5px 18px;
+
+    border: 2px solid transparent;
+    border-radius: 15px;
+
+    background:
+        linear-gradient(#171717, #171717) padding-box,
+        linear-gradient(90deg, #52D6E8, #9274FF) border-box;
+
+    transition: 0.3s ease;
+}
+
+
+
+.inputContainer:focus-within {
+    background:
+        linear-gradient(#202020, #202020) padding-box,
+        linear-gradient(90deg, #9274FF, #52D6E8) border-box;
+}
+
+.defaultInput {
+    flex: 1;
+    min-width: 0;
+
+    background: transparent;
+    border: none;
+    outline: none;
+
+    color: white;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.defaultInput::placeholder {
+    color: #999;
+}
+
+.inputIcon,
+.endElement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white;
+
+    background: transparent;
+}
+
+.inputIcon svg {
+    width: 20px;
+    height: 20px;
+}

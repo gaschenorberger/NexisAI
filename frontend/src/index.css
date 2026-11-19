@@ -1,0 +1,14 @@
+:root {
+    font-family: 'SF Pro Display', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}

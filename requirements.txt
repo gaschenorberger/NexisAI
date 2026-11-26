@@ -1,0 +1,7 @@
+fastapi==0.141.1
+uvicorn==0.52.1
+pydantic==2.13.4
+pg8000==1.31.6
+bcrypt==5.0.0
+email-validator==2.4.0
+python-dotenv==1.2.2

@@ -5,6 +5,6 @@ class RegisterService:
 
     @staticmethod
     def register(nome, email, senha):
-        senhaHash = Security.hash_password(senha)
+        senhaHash = Security.hashPassword(senha)
         registerUser = RegisterRepository.setNewUser(nome, email, senhaHash)
         return registerUser

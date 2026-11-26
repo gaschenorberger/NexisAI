@@ -67,6 +67,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    text-align: center;
 }
 
 .divider {
@@ -141,5 +142,38 @@
 
 .fullWidth {
     width: 100%;
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+}
+
+.authForm > button {
+    width: 100%;
+}
+
+.errorMessage {
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px solid #d55b73;
+    border-radius: 10px;
+    color: #ffb8c5;
+    background: rgba(145, 36, 58, 0.25);
+    text-align: center;
+}
+
+.secondaryAction {
+    margin: 0;
+    color: #c7c7c7;
+    text-align: center;
+}
+
+.secondaryAction a {
+    color: #72e7df;
+    font-weight: 600;
 }
 

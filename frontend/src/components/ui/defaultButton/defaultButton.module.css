@@ -23,6 +23,18 @@
     color: #000;
 }
 
+.defaultButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.defaultButton:disabled:hover {
+    background:
+        linear-gradient(#171717, #171717) padding-box,
+        linear-gradient(90deg, #52D6E8, #9274FF) border-box;
+    color: white;
+}
+
 .textButton{
     background: transparent;
     margin: 0;

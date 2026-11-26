@@ -1,0 +1,72 @@
+.dashboardPage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.dashboardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    width: min(100%, 480px);
+    padding: 24px;
+    text-align: center;
+}
+
+.logo {
+    width: min(260px, 80vw);
+}
+
+.eyebrow {
+    margin: 0;
+    color: #72e7df;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+}
+
+.dashboardContent h1 {
+    margin: 8px 0;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 500;
+    background: linear-gradient(90deg, #a383ff, #61ffdf);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description {
+    margin: 0;
+    color: #c7c7c7;
+    line-height: 1.5;
+}
+
+.userCard {
+    width: min(100%, 420px);
+    margin: 0;
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 14px;
+    background: rgba(23, 23, 23, 0.88);
+    text-align: left;
+}
+
+.userCard div {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 12px;
+    padding: 8px 0;
+}
+
+.userCard dt {
+    color: #999;
+}
+
+.userCard dd {
+    margin: 0;
+    overflow-wrap: anywhere;
+    color: #fff;
+}

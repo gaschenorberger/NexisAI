@@ -7,18 +7,17 @@ class RegisterRequestDTO(BaseModel):
 
     @field_validator("nome", mode="before")
     @classmethod
-    def clean_name(cls, nome):
+    def cleanName(cls, nome):
         return nome.strip() if isinstance(nome, str) else nome
 
     @field_validator("email", mode="before")
     @classmethod
-    def clean_email(cls, email):
+    def cleanEmail(cls, email):
         return email.strip().lower() if isinstance(email, str) else email
 
     @field_validator("senha")
     @classmethod
-    def validate_password(cls, senha):
+    def validatePassword(cls, senha):
         if len(senha.encode("utf-8")) > 72:
             raise ValueError("A senha deve ter no maximo 72 bytes")
         return senha
-''

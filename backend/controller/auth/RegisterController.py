@@ -1,24 +1,25 @@
 from fastapi import APIRouter, HTTPException
+
 from backend.entity.dto.auth.Register.RegisterRequestDTO import RegisterRequestDTO
 from backend.entity.dto.auth.Register.RegisterResponseDTO import RegisterResponseDTO
+from backend.exceptions import UserAlreadyExistsError
 from backend.service.auth.Register.RegisterService import RegisterService
 
-registerRouter = APIRouter(prefix="/auth", tags=["Register"])
+registerRouter = APIRouter(tags=["Authentication"])
 
-@registerRouter.post("/registerUser", response_model=RegisterResponseDTO, status_code=201)
-async def registerUser(user: RegisterRequestDTO):
+@registerRouter.post("/api/auth/register", response_model=RegisterResponseDTO, status_code=201)
+@registerRouter.post(
+    "/auth/registerUser",
+    response_model=RegisterResponseDTO,
+    status_code=201,
+    include_in_schema=False,
+)
+def registerUser(user: RegisterRequestDTO):
     try:
-        user = RegisterService.register(user.nome, user.email, user.senha)
-        return RegisterResponseDTO(**user)
-    except HTTPException:
-        raise
-
-    except Exception as e:
+        registeredUser = RegisterService.register(user.nome, user.email, user.senha)
+        return RegisterResponseDTO(**registeredUser)
+    except UserAlreadyExistsError:
         raise HTTPException(
-            status_code=500,
-            detail={
-                "Status": "error",
-                "Mensagem": "Erro interno ao cadastrar usuario",
-                "Detalhes do erro": str(e),
-            },
-        )
+            status_code=409,
+            detail="Já existe uma conta com este e-mail.",
+        ) from None
